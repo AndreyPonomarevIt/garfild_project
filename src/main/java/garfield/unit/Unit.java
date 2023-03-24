@@ -1,4 +1,4 @@
-package garfield.test.main.unit;
+package garfield.unit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

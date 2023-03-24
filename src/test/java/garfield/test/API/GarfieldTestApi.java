@@ -1,10 +1,7 @@
 package garfield.test.API;
 
 import garfield.test.UI.GarfieldTestUI;
-import garfield.test.main.page.GarfieldPage;
-import garfield.test.main.text.GarfieldText;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 

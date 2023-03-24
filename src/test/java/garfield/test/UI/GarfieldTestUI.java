@@ -1,12 +1,14 @@
 package garfield.test.UI;
-import garfield.test.main.page.GarfieldPage;
-import garfield.test.main.step.GarfieldStep;
+import garfield.step.GarfieldMethod;
+import garfield.step.GarfieldStep;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
+import static garfield.constants.Constants.IMPLICITLY;
+import static garfield.text.GarfieldText.*;
 
 
 public class GarfieldTestUI {
@@ -18,10 +20,14 @@ public class GarfieldTestUI {
         chromeOptions.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        driver.get(GarfieldPage.URL_GARFIELD_BY);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITLY));
+        driver.get(URL_GARFIELD_BY);
     }
-
+    @Test
+    public void test() {
+        GarfieldMethod garfieldMethod = new GarfieldMethod(driver);
+        garfieldMethod.inputEmailPassword(EMAIL,PASSWORD);
+    }
 
     @Test
     public void testInputCorrectDate() {
