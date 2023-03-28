@@ -1,5 +1,4 @@
 package garfield.test.UI;
-import garfield.step.GarfieldMethod;
 import garfield.step.GarfieldStep;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
@@ -23,11 +22,8 @@ public class GarfieldTestUI {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(IMPLICITLY));
         driver.get(URL_GARFIELD_BY);
     }
-    @Test
-    public void test() {
-        GarfieldMethod garfieldMethod = new GarfieldMethod(driver);
-        garfieldMethod.inputEmailPassword(EMAIL,PASSWORD);
-    }
+
+
 
     @Test
     public void testInputCorrectDate() {

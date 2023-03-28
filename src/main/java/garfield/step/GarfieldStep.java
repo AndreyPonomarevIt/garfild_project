@@ -22,10 +22,15 @@ public class GarfieldStep  {
 
         this.driver = driver;
     }
-    GarfieldMethod garfieldMethod = new GarfieldMethod(driver);
+
 
     public void testLoginValidDate() {
-        garfieldMethod.inputEmailPassword(EMAIL,PASSWORD);
+        driver.findElement(BUTTON_CLICK_LOGIN).click();
+        driver.findElement(BUTTON_CLICK_ENTER).click();
+        driver.findElement(BUTTON_CLICK_LOGIN_FROM_EMAIL).click();
+        driver.findElement(FIELD_CLICK_LOGIN_FROM_EMAIL).sendKeys(EMAIL);
+        driver.findElement(FIELD_CLICK_LOGIN_FROM_PASSWORD).sendKeys(PASSWORD);
+        driver.findElement(CLICK_BUTTON_ENTER_WITH_FILL_DATA).click();
         new WebDriverWait(driver, Duration.ofSeconds(EXPLICITLY)).until(ExpectedConditions.
                 stalenessOf(driver.findElement(BUTTON_CLICK_LOGIN)));
         driver.findElement(BUTTON_CLICK_LOGIN).click();
