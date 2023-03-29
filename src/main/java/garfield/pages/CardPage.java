@@ -1,7 +1,8 @@
 package garfield.pages;
 
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
+import static garfield.driver.DriverSetup.driver;
 import static garfield.locators.Locators.*;
 import static garfield.user.UserData.URL_GARFIELD_BY_CAT;
 
@@ -24,5 +25,17 @@ public class CardPage {
 
     public void deleteProduct(WebDriver driver) {
         driver.findElement(CLICK_BUTTON_DELETE_ORDER).click();
+    }
+    public String checkProductInCard() {
+        WebElement checkProductInCard = driver.findElement(LOGO_CARD_COMPARE);
+        return checkProductInCard.getText();
+    }
+    public String checkPrise() {
+        WebElement checkPrise = driver.findElement(CHECK_LOGO_PRISE);
+        return checkPrise.getText();
+    }
+    public String checkDeleteFromCard() {
+        WebElement checkDeleteFromCard = driver.findElement(CHECK_LOGO_DELETE_FROM_CARD);
+        return checkDeleteFromCard.getText();
     }
 }

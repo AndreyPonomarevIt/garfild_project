@@ -32,6 +32,7 @@ public class LoginPage {
     }
 
     public void clickBtnEnter2(WebDriver driver) {
+        driver.findElement(BUTTON_EXIT).click();
         new WebDriverWait(driver, Duration.ofSeconds(EXPLICITLY)).
                 until(ExpectedConditions.
                         presenceOfElementLocated(BUTTON_CLICK_LOGIN));
@@ -42,9 +43,39 @@ public class LoginPage {
         WebElement obligatoryFieldEmail = driver.findElement(LOGO_OBLIGATORY_FIELD_EMAIL);
         Unit.waitVisibilityOf(obligatoryFieldEmail);
     }
+
     public void testLoginCorrectData() {
         openAndInputLoginForm(driver, EMAIL, PASSWORD);
         clickBtnEnter(driver);
     }
+
+    public String checkWrongPassword() {
+        WebElement messageWrongPassword = driver.findElement(MESSAGE_WRONG_PASSWORD);
+        Unit.waitVisibilityOf(messageWrongPassword);
+        return messageWrongPassword.getText();
+    }
+
+    public String checkLogIn() {
+        WebElement checkNameLoginForm = driver.findElement(CHECK_NAME_LOGIN_FORM);
+        return checkNameLoginForm.getText();
+    }
+
+    public String checkNameLoginForm() {
+        WebElement checkNameLoginForm = driver.findElement(CHECK_NAME_LOGIN_FORM);
+        return checkNameLoginForm.getText();
+    }
+    public String checkOut() {
+        WebElement checkOut = driver.findElement(BUTTON_ENTER);
+        return checkOut.getText();
+    }
+    public String checkWrongEmail() {
+        WebElement checkWrongEmail = driver.findElement(MESSAGE_WRONG_EMAIL);
+        return checkWrongEmail.getText();
+    }
+    public String checkObligatoryField() {
+        WebElement checkObligatoryFieldEmail = driver.findElement(LOGO_OBLIGATORY_FIELD);
+        return  checkObligatoryFieldEmail.getText();
+    }
+
 }
 
