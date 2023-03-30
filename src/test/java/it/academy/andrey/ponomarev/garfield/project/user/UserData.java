@@ -1,4 +1,4 @@
-package garfield.user;
+package it.academy.andrey.ponomarev.garfield.project.user;
 
 import com.github.javafaker.Faker;
 public class UserData  {

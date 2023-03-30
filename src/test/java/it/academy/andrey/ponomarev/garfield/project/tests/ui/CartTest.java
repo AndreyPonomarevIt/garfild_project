@@ -1,15 +1,14 @@
-package garfield.tests.ui;
+package it.academy.andrey.ponomarev.garfield.project.tests.ui;
 
-import garfield.driver.DriverSetup;
-import garfield.pages.CardPage;
-import garfield.user.UserData;
+import it.academy.andrey.ponomarev.garfield.project.driver.DriverSetup;
+import it.academy.andrey.ponomarev.garfield.project.pages.CartPage;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
-import static garfield.driver.DriverSetup.driver;
-import static garfield.user.UserData.*;
+import static it.academy.andrey.ponomarev.garfield.project.driver.DriverSetup.driver;
+import static it.academy.andrey.ponomarev.garfield.project.user.UserData.*;
 
-public class CardTest extends CardPage {
-    CardPage cardPage = new CardPage();
+public class CartTest extends CartPage {
+    CartPage cardPage = new CartPage();
     @BeforeEach
     public void initObject() {
         WebDriver driver = DriverSetup.createDriver();
@@ -29,7 +28,7 @@ public class CardTest extends CardPage {
         cardPage.orderAddCard(driver, PRODUCT);
         cardPage.addCard(driver);
         cardPage.increaseCount(driver);
-        Assertions.assertEquals(UserData.CHECK_PRISE, checkPrise());
+        Assertions.assertEquals(CHECK_PRISE, checkPrise());
     }
 
     @Test
