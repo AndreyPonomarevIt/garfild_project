@@ -1,6 +1,6 @@
-package garfield.tests.api;
+package it.academy.andrey.ponomarev.garfield.project.tests.api;
 
-import garfield.tests.ui.LoginTest;
+import it.academy.andrey.ponomarev.garfield.project.tests.ui.LoginTest;
 import io.restassured.RestAssured;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
