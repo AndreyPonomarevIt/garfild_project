@@ -16,7 +16,7 @@ public class CartPage {
 
     public void addCard(WebDriver driver) {
         driver.findElement(Locators.CLICK_BUTTON_CROSS).click();
-        driver.findElement(Locators.CLICK_BTN_CARD).click();
+        driver.findElement(Locators.CLICK_BTN_CART).click();
     }
 
     public void increaseCount(WebDriver driver) {

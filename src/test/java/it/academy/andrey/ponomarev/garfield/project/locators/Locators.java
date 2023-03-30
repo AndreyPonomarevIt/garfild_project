@@ -8,7 +8,7 @@ public class Locators {
 
 
     public static final By CLICK_BUTTON_SEARCH = By.xpath("//div[@id='js-search']");
-    public static final By INPUT_PRODUCT = By.xpath("//input[@class='search-field__input js-header-search-input']");
+    public static final By INPUT_PRODUCT = By.cssSelector("input.search-field__input.js-header-search-input");
     public static final By ADD_CART = By.xpath("//div[@prod-id='237981']");
     public static final By CLICK_BUTTON_CROSS
             = By.xpath("//img[@class='search-field__close js-popup-close']");
