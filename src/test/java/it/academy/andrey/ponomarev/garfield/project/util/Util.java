@@ -1,0 +1,34 @@
+package it.academy.andrey.ponomarev.garfield.project.util;
+
+import it.academy.andrey.ponomarev.garfield.project.driver.DriverSetup;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import static it.academy.andrey.ponomarev.garfield.project.constants.Constants.EXPLICITLY;
+
+public  class Util {
+    public static void waitTimeFor(int seconds) {
+        try {
+            TimeUnit.SECONDS.sleep(seconds);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+        public static boolean waitPresenceElement(By.ByXPath locator) {
+            new WebDriverWait(DriverSetup.driver, Duration.ofSeconds(EXPLICITLY))
+                    .until(ExpectedConditions
+                            .presenceOfElementLocated(locator));
+            return true;
+        }
+    public static boolean waitStalenessOf(WebElement element){
+        new WebDriverWait(DriverSetup.driver, Duration.ofSeconds(EXPLICITLY))
+                .until(ExpectedConditions
+                        .stalenessOf(element));
+        return true;
+    }
+
+}
