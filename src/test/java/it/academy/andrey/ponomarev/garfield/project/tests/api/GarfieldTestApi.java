@@ -18,6 +18,8 @@ public class GarfieldTestApi {
                     .post(url).then().assertThat().statusCode(200).body(Matchers.equalTo(body));
     }
 
+
+
     @Test
     public void testPostGarfieldNotCorrectDate() {
         WebDriver driver = new ChromeDriver();
@@ -27,7 +29,7 @@ public class GarfieldTestApi {
                 when().post(url + "?login=yes").
                 then().assertThat().statusCode(200).body(Matchers.equalTo(body));
     }
-
+ 
     @Test
     public void testGetRequest() {
         String url = "www.garfield.by";
