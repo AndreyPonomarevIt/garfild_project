@@ -3,7 +3,6 @@ package it.academy.andrey.ponomarev.garfield.project.tests.ui;
 import it.academy.andrey.ponomarev.garfield.project.pages.CartPage;
 import it.academy.andrey.ponomarev.garfield.project.steps.CartSteps;
 import org.junit.jupiter.api.*;
-
 import static it.academy.andrey.ponomarev.garfield.project.user.UserData.*;
 
 public class CartTest extends BaseTest  {

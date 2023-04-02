@@ -4,13 +4,10 @@ import it.academy.andrey.ponomarev.garfield.project.steps.LoginSteps;
 import org.junit.jupiter.api.Assertions;
 import it.academy.andrey.ponomarev.garfield.project.pages.LoginPage;
 import org.junit.jupiter.api.*;
-
 import static it.academy.andrey.ponomarev.garfield.project.user.UserData.*;
 
 public class LoginTest extends BaseTest  {
     LoginPage loginPage = new LoginPage();
-
-
 
     @Test
     @DisplayName("Авторизация с корректными валидными данными")
@@ -32,8 +29,6 @@ public class LoginTest extends BaseTest  {
         LoginSteps.stepsUserLogInAndCheckOut(EMAIL, PASSWORD);
         Assertions.assertEquals(LOGO_ENTER, loginPage.getOut());
     }
-
-
 
     @Test
     @DisplayName("Авторизация с невалидными данными")
@@ -57,10 +52,4 @@ public class LoginTest extends BaseTest  {
         Assertions.assertEquals(OBLIGATORY_FIELD, loginPage.getObligatoryFieldEmail());
     }
 
-
 }
-
-
-
-
-

@@ -8,7 +8,6 @@ public class LoginSteps extends LoginPage {
                 .openAndInputLoginForm(email, password)
                 .clickBtnEnter();
     }
-
     public static void stepsUserLogInAndCheckOut(String email, String password) {
         new LoginPage()
                 .openAndInputLoginForm(email, password)

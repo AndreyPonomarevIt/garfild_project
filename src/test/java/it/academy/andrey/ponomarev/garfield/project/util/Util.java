@@ -18,17 +18,26 @@ public  class Util {
             throw new RuntimeException(e);
         }
     }
-        public static boolean waitPresenceElement(By.ByXPath locator) {
-            new WebDriverWait(DriverSetup.driver, Duration.ofSeconds(EXPLICITLY))
-                    .until(ExpectedConditions
+    public static boolean waitPresenceElement(By.ByXPath locator) {
+        WebDriverWait webDriverWait = new WebDriverWait(DriverSetup.driver, Duration.ofSeconds(EXPLICITLY));
+        try {
+            webDriverWait.until(
+                    ExpectedConditions
                             .presenceOfElementLocated(locator));
             return true;
+        } catch (Exception exception) {
+            return false;
         }
-    public static boolean waitStalenessOf(WebElement element){
-        new WebDriverWait(DriverSetup.driver, Duration.ofSeconds(EXPLICITLY))
-                .until(ExpectedConditions
-                        .stalenessOf(element));
-        return true;
+    }
+    public static boolean waitStalenessOf(WebElement element) {
+        try {
+            new WebDriverWait(DriverSetup.driver, Duration.ofSeconds(EXPLICITLY))
+                    .until(ExpectedConditions
+                            .stalenessOf(element));
+            return true;
+        }catch (Exception exception){
+            return false;
+        }
     }
 
 }

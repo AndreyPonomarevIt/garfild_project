@@ -19,7 +19,6 @@ public class LoginPage {
     public static final By MESSAGE_WRONG_EMAIL = By.xpath("(//p[contains(text(),'почтовом адресе ошибка')])[1]");
     public static final By MESSAGE_WRONG_PASSWORD = By.xpath("//p[@class='field-error js-error js-error-incorrect active'][contains(text(),'В пароле ошибка')]");
     public static final By BUTTON_ENTER = By.xpath("//a[@class='link p2 gray js-popup-open'][contains(text(),'Войти')]");
-
     public LoginPage openAndInputLoginForm( String email, String password) {
         driver.findElement(BUTTON_CLICK_LOGIN).click();
         driver.findElement(BUTTON_CLICK_ENTER).click();

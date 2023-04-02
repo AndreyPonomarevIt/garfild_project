@@ -5,7 +5,6 @@ import it.academy.andrey.ponomarev.garfield.project.pages.CartPage;
 import static it.academy.andrey.ponomarev.garfield.project.user.UserData.PRODUCT;
 
 public class CartSteps extends CartPage {
-
     public static void putOrderToCart() {
         new CartPage()
                 .orderAddCart(PRODUCT)
@@ -23,4 +22,5 @@ public class CartSteps extends CartPage {
                 .addCart()
                 .deleteProduct();
     }
+
 }
