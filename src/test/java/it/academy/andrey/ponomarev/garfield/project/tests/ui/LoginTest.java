@@ -11,7 +11,7 @@ public class LoginTest extends BaseTest  {
 
     @Test
     @DisplayName("Авторизация с корректными валидными данными")
-    public void testLoginCorrectData() {
+    public void  testLoginCorrectData() {
         LoginSteps.stepsUserLogIn(EMAIL, PASSWORD);
         Assertions.assertEquals(LOGO_NAME_USER, loginPage.getLogIn());
     }
