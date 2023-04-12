@@ -13,5 +13,4 @@ public class LoginSteps extends LoginPage {
                 .openAndInputLoginForm(email, password)
                 .clickBtnEnterLoginForm();
     }
-
 }

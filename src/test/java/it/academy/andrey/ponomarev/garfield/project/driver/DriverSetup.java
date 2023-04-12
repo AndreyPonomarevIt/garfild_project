@@ -24,5 +24,4 @@ public class DriverSetup {
         driver.quit();
         driver = null;
     }
-
 }

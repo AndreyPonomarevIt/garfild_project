@@ -22,5 +22,4 @@ public class CartSteps extends CartPage {
                 .addCart()
                 .deleteProduct();
     }
-
 }

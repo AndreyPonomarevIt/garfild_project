@@ -51,5 +51,4 @@ public class LoginTest extends BaseTest  {
         loginPage.openAndInputLoginForm(EMAIL, PASSWORD_EMPTY);
         Assertions.assertEquals(OBLIGATORY_FIELD, loginPage.getObligatoryFieldEmail());
     }
-
 }

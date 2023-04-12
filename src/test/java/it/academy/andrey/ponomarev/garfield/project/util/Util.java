@@ -18,7 +18,7 @@ public  class Util {
             throw new RuntimeException(e);
         }
     }
-    public static boolean waitPresenceElement(By.ByXPath locator) {
+    public static boolean waitPresenceOfElement(By.ByXPath locator) {
         WebDriverWait webDriverWait = new WebDriverWait(DriverSetup.driver, Duration.ofSeconds(EXPLICITLY));
         try {
             webDriverWait.until(
@@ -39,5 +39,4 @@ public  class Util {
             return false;
         }
     }
-
 }

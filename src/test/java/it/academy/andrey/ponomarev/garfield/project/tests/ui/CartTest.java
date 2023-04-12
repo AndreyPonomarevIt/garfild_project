@@ -28,5 +28,4 @@ public class CartTest extends BaseTest  {
         CartSteps.putOrderToCartAndDelete();
         Assertions.assertEquals(TEXT_LOGO_DELETE_FROM_CARD, cardPage.getDeleteFromCart());
     }
-
 }
